@@ -4,9 +4,9 @@ Originally built as an eligibility checker for potential guests/referrers at The
 Testing Instructions for Local Hosting
 
 1. Create a new folder on desktop
-2. Download FlaskApp.py and eligibility_check.html into the new folder
+2. Download eligibility_logic.py and eligibility_template.html into the new folder
 3. Create a new folder within the folder and name it “templates”
-4. Place eligibility_check.html into “templates”
+4. Place eligibility_template.html into “templates”
 5. Create a new project at https://console.cloud.google.com
 6. In the top left, select Navigation Menu and go to IAM & Admin
 7. Click on Service Accounts and create one (make name what you want)
@@ -18,7 +18,7 @@ Testing Instructions for Local Hosting
 13. Search “Google Sheets API” and repeat steps 11 and 12
 14. Modify the .py file so it contains the corresponding google sheet file name, sheet name, and .json file name. Also modify code as needed
 15. Share the Google Sheet file with the service account email as an Editor
-16. Open FlaskApp.py and eligibility_check.html in your IDE
+16. Open eligibility_logic.py and eligibility_template.html in your IDE
 17. In FlaskApp.py type “pip install gspread google-auth” and then “pip install flask” into the console. It should take a few seconds to install each package
 18. Run script, console should display locally hosted URL named https://127.0.0.1:8123
 19. Copy link and paste into a browser while script is running
