@@ -6,12 +6,11 @@ from google.oauth2.service_account import Credentials
 app = Flask(__name__)
 
 #Calling spreadsheets
-spreadsheet_name = "The Bird House Referral Database"
-sheet_name = "Eligibility"
-sheet_name2 = "Waitlist"
+spreadsheet_name = "file_name"
+sheet_name = "sheet_name"
 
 #API Credentials
-credentials = Credentials.from_service_account_file('BHEligibility.json')
+credentials = Credentials.from_service_account_file('name.json')
 scoped_credentials = credentials.with_scopes(['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive'])
 client = gspread.Client(auth=scoped_credentials)
 
@@ -20,8 +19,6 @@ spreadsheet = client.open(spreadsheet_name)
 
 #Naming sheets
 eligibility_sheet = spreadsheet.worksheet(sheet_name)
-waitlist_sheet = spreadsheet.worksheet(sheet_name2)
-
 
 @app.route('/', methods=['GET', 'POST'])
 def eligibility_check():
@@ -65,13 +62,13 @@ def eligibility_check():
             #Append ineligible users to Eligible sheet
             eligibility_sheet.append_row([client_first_name, client_last_name, "Ineligible", enrolled_agency, birthday, reason, weight+"lbs", phone, email])
             #Ineligible message
-            return "The guest is ineligible for The Bird House but may be reconsidered. \nPlease contact (319) 499-1882 or info@hospicehomejc.org if you want additional information."
+            return "The guest is ineligible for the Care Center but may be reconsidered. \nPlease contact (xxx) xxx-xxxx or xxxx@xxx.xxx if you want additional information."
 
         #Appending eligible users to Eligible sheet
         eligibility_sheet.append_row([client_first_name, client_last_name, "Eligible", enrolled_agency, birthday, " ", weight+"lbs", phone, email])
 
         #Eligible message to user
-        return "Congratulations! The guest is eligible to stay at The Bird House.\nLook for a call from (319) 499-1882 or an email from info@hospicehomejc.org soon!"
+        return "Congratulations! The guest is eligible to stay at Care Center.\nLook for a call from (xxx) xxx-xxxx or an email from xxx@xxx.xxx soon!"
 
     #Returning info to eligibility_check.html
     return render_template('eligibility_check.html')
