@@ -70,8 +70,8 @@ def eligibility_check():
         #Eligible message to user
         return "Congratulations! The guest is eligible to stay at Care Center.\nLook for a call from (xxx) xxx-xxxx or an email from xxx@xxx.xxx soon!"
 
-    #Returning info to eligibility_check.html
-    return render_template('eligibility_check.html')
+    #Returning info to eligibility_template.html
+    return render_template('eligibility_template.html')
 
 
 #Running application locally
