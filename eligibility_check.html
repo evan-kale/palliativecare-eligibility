@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eligibility Check</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+      }
+
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+      }
+
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Eligibility Check</h1>
+    <form method="POST" action="/">
+      <label for="client_first_name">Guest's first name:</label>
+      <input type="text" name="client_first_name" required>
+      
+      <label for="client_last_name">Guest's last name:</label>
+      <input type="text" name="client_last_name" required>
+      
+      <label for="birthday">Guest date of birth (MM/DD/YYYY):</label>
+      <input type="text" name="birthday" required>
+
+      <label for="life_expectancy">Enter the estimated life expectancy of the guest (in months):</label>
+      <input type="number" name="life_expectancy" required>
+
+      <label for="enrolled_agency">Is the guest enrolled with one of the following hospice agencies:</label>
+      <select name="enrolled_agency">
+        <option value="" disabled selected>Select an agency</option>
+        <option value="Iowa City Hospice">Iowa City Hospice</option>
+        <option value="Compassus in Cedar Rapids">Compassus in Cedar Rapids</option>
+        <option value="Hospice of Washington County">Hospice of Washington County</option>
+        <option value="Essence of Life in Amana">Essence of Life in Amana</option>
+        <option value="Avalon Hospice in Hiawatha">Avalon Hospice in Hiawatha</option>
+        <option value="St. Croix Hospice in Cedar Rapids">St. Croix Hospice in Cedar Rapids</option>
+        <option value="Care Initiatives in Cedar Rapids">Care Initiatives in Cedar Rapids</option>
+        <option value="N/A">N/A</option>
+      </select>
+
+      <label for="covid_status">Is the guest COVID negative at the time of admission? (yes/no):</label>
+      <input type="text" name="covid_status" required>
+     
+      <label for="weight">Enter the guest's weight (in pounds):</label>
+      <input type="number" name="weight" required>
+
+      <label for="dnr_status">Does the guest have a 'Do Not Resuscitate' status? (yes/no):</label>
+      <input type="text" name="dnr_status" required>
+      
+      <label for="dnr_status">Does the guest have a Durable Power of Attorney for health care decision making? (yes/no):</label>
+      <input type="text" name="attorney_status" required>
+
+      <label for="hospice_plan">Is there a hospice plan for continued care in case of discharge? (yes/no):</label>
+      <input type="text" name="hospice_plan" required>
+
+      <label for="agreement">Do the guest, their family, or their friends agree on the purpose of admission, hospice care plan, and projected length of stay? (yes/no):</label>
+      <input type="text" name="agreement" required>
+      
+      <label for="phone">Guest's phone number (optional):</label>
+      <input type="text" name="phone">
+      
+      <label for="email">Guest's email (optional):</label>
+      <input type="text" name="email">
+
+      <input type="submit" value="Check Eligibility">
+    </form>
+  </body>
+</html>
