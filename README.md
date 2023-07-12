@@ -1,5 +1,5 @@
 # palliativecare-eligibility
-Originally built as an eligibility checker for potential guests/referrers at The Bird House, an Iowa City palliative care center
+Originally built as an eligibility checker for potential guests/referrers at The Bird House, an Iowa City palliative care center.
 
 Testing Instructions for Local Hosting
 
@@ -15,7 +15,7 @@ Testing Instructions for Local Hosting
 10. Save JSON into the new folder you created
 11. In the search bar at the top of the page, search “Google Drive API” and scroll to the exact result under the “marketplace” heading
 12. Click enable and let it load
-13. Search “Google Sheets API” and repeat steps 11 and 12
+13. Repeat steps 11 and 12 with "Google Sheets API"
 14. Modify the .py file so it contains the corresponding google sheet file name, sheet name, and .json file name. Also modify code as needed
 15. Share the Google Sheet file with the service account email as an Editor
 16. Open eligibility_logic.py and eligibility_template.html in your IDE
