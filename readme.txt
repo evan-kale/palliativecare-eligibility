@@ -1,7 +1,6 @@
 Eligibility checker for potential guests/referrers at The Bird House, an Iowa City palliative care center.
+
 Testing Instructions for Local Hosting
-
-
 1. Download BHEligibility.json, FlaskApp.py, and eligibility_check.html into a new folder named “EligibilityCheck”.
 2. Create a folder within the newly created folder named “templates” and move eligibility_check.html into it.
 3. In your IDE, type “pip install gspread google-auth” and then “pip install flask” into the console. It should take a few seconds to install each package.
