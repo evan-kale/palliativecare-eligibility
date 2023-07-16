@@ -19,7 +19,7 @@ Testing Instructions for Local Hosting
 14. Modify the .py file so it contains the corresponding google sheet file name, sheet name, and .json file name. Also modify code as needed
 15. Share the Google Sheet file with the service account email as an Editor
 16. Open eligibility_logic.py and eligibility_template.html in your IDE
-17. In FlaskApp.py type “pip install gspread google-auth” and then “pip install flask” into the console. It should take a few seconds to install each package
+17. In eligibility_logic.py type “pip install gspread google-auth” and then “pip install flask” into the console. It should take a few seconds to install each package
 18. Run script, console should display locally hosted URL named https://127.0.0.1:8123
 19. Copy link and paste into a browser while script is running
 
